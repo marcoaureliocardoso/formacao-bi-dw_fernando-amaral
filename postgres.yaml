@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+
+  db-postgress:
+    image: postgres
+    container_name: db-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Qwaszx123
+      POSTGRES_DB: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - /home/marco/projects/bi/db/postgres/data:/var/lib/postgresql/data

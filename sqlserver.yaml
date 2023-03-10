@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+
+  db-sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: db-sqlserver
+    hostname: db-sqlserver
+    restart: unless-stopped
+    environment:
+      MSSQL_SA_PASSWORD: Qwaszx123
+      ACCEPT_EULA: Y
+    ports:
+      - 1433:1433
+    volumes:
+      - /home/marco/projects/bi/db/sqlserver:/var/opt/mssql
